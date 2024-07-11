@@ -15,7 +15,7 @@ export const Contact = () => {
 	}
 	return (
 		<div>
-			{store.Contacts.length === 0 && <span className="m-5 p-5 text-danger">No contacts jet</span>}
+			{store.Contacts.length === 0 && <span className="m-5 p-5 text-danger">Add a new contact</span>}
 			{store.Contacts.map((contact) => {
 				return (
 					<div key={contact.id} className="row border rounded m-2">
