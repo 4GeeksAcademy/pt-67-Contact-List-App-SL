@@ -37,7 +37,7 @@ export const UpdateContact = () => {
                 <input value={address} onChange={(e) => setAddress(e.target.value)} type="text" className="form-control" id="address" aria-describedby="address" placeholder="Direccion Completa" />
             </div>
             <div className="mb-3">
-                <button className="btn btn-warning w-100" type="submit">Save</button>
+                <button className="btn btn-info w-100" type="submit">Save</button>
             </div>
             <Link to="/">Contact list</Link>
         </form>

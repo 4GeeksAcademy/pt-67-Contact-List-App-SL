@@ -15,12 +15,11 @@ export const Contact = () => {
 	}
 	return (
 		<div>
-			{store.Contacts.length === 0 && <span className="m-5 p-5 text-danger">Add a new contact</span>}
-			{store.Contacts.map((contact) => {
+			{store.Contacts.length === 0 && <span className="m-5 p-5 text-emphasis">Add a new contact</span>}
+			{store.Contacts?.map((contact) => {
 				return (
 					<div key={contact.id} className="row border rounded m-2">
 						<div className="col-3 col-lg-2 p-2 mx-4 my-auto">
-							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp8-7zKqxeqUgJ0SfeQ9jxZzFzU_6nTObmYQ&s" className="card-img rounded-circle" alt="..." />
 						</div>
 						<div className="col p-2 my-auto">
 							<div className="row d-flex">
@@ -69,7 +68,7 @@ export const Contact = () => {
 						</div>
 						<div className="modal-footer">
 							<button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Keep it</button>
-							<button onClick={() => confirmDelete()} type="button" className="btn btn-warning" data-bs-dismiss="modal">Eliminar de todos modos!</button>
+							<button onClick={() => confirmDelete()} type="button" className="btn btn-info" data-bs-dismiss="modal">Delete anyway!</button>
 						</div>
 					</div>
 				</div>

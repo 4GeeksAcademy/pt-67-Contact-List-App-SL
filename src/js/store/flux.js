@@ -20,14 +20,14 @@ const getState = ({ getStore, getActions, setStore }) => {
         actions: {
             createContactList: async () => {
                 const actions = getActions();
-                await fetch("https://playground.4geeks.com/contact/agendas/EduardoLoreto", {
+                await fetch("https://playground.4geeks.com/contact/agendas/Inflanubes", {
                     method: "POST",
                 });
                 actions.getContacts();
             },
             getContacts: async () => {
                 const actions = getActions();
-                const response = await fetch("https://playground.4geeks.com/contact/agendas/EduardoLoreto");
+                const response = await fetch("https://playground.4geeks.com/contact/agendas/Inflanubes");
                 if (!response.ok) {
                     actions.createContactList();
                 }
@@ -38,7 +38,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             },
             postContact: async (inputName, inputPhone, inputEmail, inputAddress) => {
                 const actions = getActions();
-                const response = await fetch("https://playground.4geeks.com/contact/agendas/EduardoLoreto/contacts", {
+                const response = await fetch("https://playground.4geeks.com/contact/agendas/Inflanubes/contacts", {
                     method: "POST",
                     body: JSON.stringify({
                         name: inputName,
@@ -51,10 +51,10 @@ const getState = ({ getStore, getActions, setStore }) => {
                     }
                 });
                 if (response.ok) {
-                    alert("contacto creado correctamente");
+                    alert("Contact created");
                     actions.getContacts();
                 } else {
-                    alert("no se puede crear");
+                    alert("Not able to proceed");
                 }
             },
             setIdForUpdate: (id, name, address, phone, email) => {
@@ -71,7 +71,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             putContact: async (inputName, inputPhone, inputEmail, inputAddress) => {
                 const actions = getActions();
                 const store = getStore();
-                const response = await fetch('https://playground.4geeks.com/contact/agendas/EduardoLoreto/contacts/' + `${store.contact2.id}`, {
+                const response = await fetch('https://playground.4geeks.com/contact/agendas/Inflanubes/contacts/' + `${store.contact2.id}`, {
                     method: "PUT",
                     body: JSON.stringify({
                         name: inputName,
@@ -92,7 +92,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             },
             deleteContact: async (id) => {
                 const actions = getActions();
-                const response = await fetch('https://playground.4geeks.com/contact/agendas/EduardoLoreto/contacts/' + `${id}`, {
+                const response = await fetch('https://playground.4geeks.com/contact/agendas/Inflanubes/contacts/' + `${id}`, {
                     method: "DELETE",
                 });
                 if (!response.ok) {
