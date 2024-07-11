@@ -19,28 +19,28 @@ export const AddContact = () => {
 
 	return (
 		<form className="container-fluid" onSubmit={handleSubmit}>
-			<h1 className="mt-5 mx-auto p-3 text-center text-warning
+			<h1 className="mt-5 mx-auto p-3 text-center text-info
 			 text-decoration-underline">Add new contact</h1>
 			<div className="mb-3">
 				<label className="form-label text-primary">Name Surname</label>
-				<input value={name} onChange={(e) => setName(e.target.value)} type="text" className="form-control" id="fullName" aria-describedby="Full Name" placeholder="Introduce aqui tu nombre" />
+				<input value={name} onChange={(e) => setName(e.target.value)} type="text" className="form-control" id="fullName" aria-describedby="Full Name" placeholder="Add your name" />
 			</div>
 			<div className="mb-3">
 				<label className="form-label text-primary">E-mail</label>
-				<input value={email} onChange={(e) => setEmail(e.target.value)} type="email" className="form-control" id="email" aria-describedby="email" placeholder="Introduce aqui tu E-mail" />
+				<input value={email} onChange={(e) => setEmail(e.target.value)} type="email" className="form-control" id="email" aria-describedby="email" placeholder="Add your E-mail" />
 			</div>
 			<div className="mb-3">
 				<label className="form-label text-primary">Phone number</label>
-				<input value={phone} onChange={(e) => setPhone(e.target.value)} type="text" className="form-control" id="phone" aria-describedby="phone" placeholder="Introduce aqui tu Telefono" />
+				<input value={phone} onChange={(e) => setPhone(e.target.value)} type="text" className="form-control" id="phone" aria-describedby="phone" placeholder="Add your phone number" />
 			</div>
 			<div className="mb-3">
 				<label className="form-label text-primary">Addres</label>
-				<input value={address} onChange={(e) => setAddress(e.target.value)} type="text" className="form-control" id="address" aria-describedby="address" placeholder="Introduce aqui tu direccion completa" />
+				<input value={address} onChange={(e) => setAddress(e.target.value)} type="text" className="form-control" id="address" aria-describedby="address" placeholder="Add your addres" />
 			</div>
 			<div className="mb-3">
 				<button className="btn btn-warning w-100" type="submit">Save</button>
 			</div>
-			<Link to="/">Volver a la lista de contactos</Link>
+			<Link to="/">Contact list</Link>
 		</form>
 	);
 };
